@@ -19,8 +19,9 @@ namespace DataFabricEntry.Runtime
     // 反射接口
     public interface IProtoAPI
     {
-        int GetRequest(Type type);
-        Type GetRequestType(int hashCode);
-        Type GetResponse(int hashCode);
+        int GetMessageOpcode(Type type);
+        int GetMessageResponseCode(Type type);
+        Type GetRequestMessage(int hashCode);
+        Type GetResponseMessage(int hashCode);
     }
 }
